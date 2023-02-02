@@ -1,11 +1,11 @@
-function Title(props) {
+function Title({ title }) {
   let strLength;
 
-  if (props.title.length > 50) {
-    strLength = props.title.substring(0, 50);
+  if (title.length > 50) {
+    strLength = title.substring(0, 50);
     strLength = `${strLength}…`;
   } else {
-    strLength = props.title;
+    strLength = title;
   }
 
   return strLength;

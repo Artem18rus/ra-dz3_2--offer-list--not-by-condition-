@@ -2,10 +2,10 @@ import React from "react";
 import Title from "./Title";
 import Price from "./Price";
 
-function Listing(props) {
+function Listing({ items }) {
   return (
     <div className="item-list">
-      {props.items.map((item, idx) => (
+      {items.map((item) => (
         <div className="item" key={item.listing_id}>
           <div className="item-image" key={item.listing_id}>
             <a href={item.url}>

@@ -1,16 +1,16 @@
-function Price(props) {
+function Price({ price, currency_code }) {
   let insertCode;
   let lighting;
-  if (props.currency_code === "USD") {
-    insertCode = `$${props.price}`;
+  if (currency_code === "USD") {
+    insertCode = `$${price}`;
 
     //удаляем последние 2 символа (без точки):
-    lighting = insertCode.substring(0, props.price.length - 1);
-  } else if (props.currency_code === "EUR") {
-    insertCode = `€${props.price}`;
-    lighting = insertCode.substring(0, props.price.length - 1);
+    lighting = insertCode.substring(0, price.length - 1);
+  } else if (currency_code === "EUR") {
+    insertCode = `€${price}`;
+    lighting = insertCode.substring(0, price.length - 1);
   } else {
-    lighting = props.price.split(".")[0] + ".";
+    lighting = price.split(".")[0] + ".";
   }
 
   return lighting;
